@@ -19,7 +19,8 @@ const move = (direction: Direction) => {
       position.x += 1;
       break;
     default:
-      throw new Error(`unknown direction: ${direction}`);
+      const invalid: never = direction;
+      throw new Error(`unknown direction: ${invalid}`);
   }
 };
 
