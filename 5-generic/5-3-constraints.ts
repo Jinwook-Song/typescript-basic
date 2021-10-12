@@ -36,4 +36,21 @@
 
   const ellieAfterPay = pay(ellie);
   const bobAfterPay = pay(bob);
+
+  //////////////////////////////////////////////////////////////////////
+  const obj = {
+    name: "ellie",
+    age: 20,
+  };
+  const obj2 = {
+    animal: "🐼",
+  };
+
+  function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+    return obj[key];
+  }
+
+  console.log(getValue(obj, "name"));
+  console.log(getValue(obj, "age"));
+  console.log(getValue(obj2, "animal"));
 }
