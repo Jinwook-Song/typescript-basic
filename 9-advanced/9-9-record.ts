@@ -10,4 +10,8 @@
     about: { title: "About" },
     contact: { title: "Contact" },
   };
+
+  // etc
+  type Product = "cat" | "dog";
+  type NewProduct = Capitalize<Product>; // 'Cat' | 'Dog'
 }
